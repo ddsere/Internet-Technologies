@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-css-animations</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box {
+        width: 400px;
+        height: 3px;
+        background-color: red;
+        position: absolute;
+
+        /* animation-name: left-right;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-delay: 500ms; */
+
+        animation: loading 1s ease-in-out infinite,
+          color-change 5s ease-in-out infinite;
+      }
+      @keyframes loading {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        100% {
+          top: 0;
+          left: calc(100% - 400px);
+        }
+      }
+      @keyframes color-change {
+        0% {
+          background-color: red;
+        }
+        25% {
+          background-color: yellow;
+        }
+        50% {
+          background-color: green;
+        }
+        75% {
+          background-color: blue;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

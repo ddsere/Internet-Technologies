@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise6</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: wheat;
+      }
+      header {
+        background-color: black;
+        color: wheat;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+      }
+      .logo-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 12px;
+        margin-top: 9px;
+      }
+      nav > ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
+      nav > ul > li > a {
+        text-decoration: none;
+        color: wheat;
+      }
+      nav > ul > li {
+        margin: 0 15px;
+      }
+      .hero-section {
+        display: flex;
+        width: 100%;
+      }
+      .hero-content {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px;
+      }
+      .hero-image {
+        width: 50vw;
+      }
+      .hero-image img {
+        width: 50vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+      .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        gap: 8px;
+      }
+      .social-media img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+      }
+      .more-info-btn {
+        background-color: black;
+        color: wheat;
+        border-radius: 16px;
+        padding: 8px;
+        cursor: pointer;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="/assets/images/IMG-20240310-WA0045.jpg"
+          alt="prof-image"
+        />
+        <h3>Daham Serasinghe</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Welcome to my website !</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+            quam reiciendis molestiae officiis eveniet harum cupiditate
+            blanditiis optio nihil similique ab, rerum et rem inventore
+            molestias explicabo excepturi accusantium quod fugiat reprehenderit
+            eum doloribus? Dolorum provident officiis dolor iure nulla
+            architecto quos ad, eum sed ducimus mollitia voluptatibus eius
+            ipsam?
+          </p>
+          <button class="more-info-btn">More Info</button>
+          <div class="social-media">
+            <a href="#"
+              ><img src="/assets/images/facebook.png" alt="facebook-logo"
+            /></a>
+            <a href="#"
+              ><img src="/assets/images/linkedin.png" alt="linkedin-logo"
+            /></a>
+            <a href="#"
+              ><img src="/assets/images/youtube.png" alt="youtube-logo"
+            /></a>
+            <a href="#"
+              ><img src="/assets/images/github.png" alt="git-logo"
+            /></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="/assets/images/IMG-20240310-WA0045.jpg"
+            alt="profile-image"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

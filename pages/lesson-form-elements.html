@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-form-elemensts</title>
+  </head>
+  <body>
+    <h1>Form Elements</h1>
+
+    <!-- label - This is used to define what should user to enter -->
+    <strong>========== 1. Labels ==========</strong>
+    <br />
+    <label for="First Name">First name: </label>
+    <hr />
+
+    <strong>========== 2. Input ==========</strong>
+    <br />
+    <p>-------- Text Input --------</p>
+    <label for="phone number">Phone Number: </label>
+    <input type="text" placeholder="eg: 9477xxxxxxx" maxlength="11" />
+    <br />
+    <p>-------- Number Input --------</p>
+    <label for="age">Age: </label>
+    <input type="number" value="18" />
+    <br />
+    <p>-------- Password Input --------</p>
+    <label for="Password">Password: </label>
+    <input type="password" />
+    <br />
+    <p>-------- Date input --------</p>
+    <label for="date">Date: </label>
+    <input type="date" />
+    <br />
+    <p>-------- Radio buttons --------</p>
+    <label for="male">Male: </label>
+    <input type="radio" />
+    <label for="female">Female: </label>
+    <input type="radio" />
+    <br />
+    <p>-------- Check Boxes --------</p>
+    <label for="remember me">Remember me: </label>
+    <input type="checkbox" />
+    <br />
+    <p>-------- File Upload --------</p>
+    <input type="file" />
+    <br />
+    <hr />
+    <strong>========== 3. Text Area ==========</strong>
+    <br />
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Type your message here..."
+      rows="5"
+      cols="50"
+    ></textarea>
+    <br />
+    <hr />
+    <strong>========== 4. Buttons ==========</strong>
+    <br />
+    <button onclick="alert('Button Clicked!')">Click me</button>
+    <br />
+    <hr />
+    <strong>========== 5. Select ==========</strong>
+    <br />
+    <select name="Technologies" id="tech">
+      <option value="">Java</option>
+      <option value="">JavaScript</option>
+      <option value="">Python</option>
+      <option value="">C#</option>
+    </select>
+    <br />
+    <strong>========== 6. Form ==========</strong>
+    <form action="">
+      <label for="first name">First Name: </label>
+      <input type="text" placeholder="John" />
+      <br />
+      <label for="last name">Last Name: </label>
+      <input type="text" placeholder="Doe" />
+      <br />
+      <label for="age">Age: </label>
+      <input type="number" value="18" />
+      <br />
+      <button>save</button>
+    </form>
+  </body>
+</html>

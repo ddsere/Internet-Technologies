@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Lessons</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2em;
+        background: #f9f9f9;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      h2 {
+        color: #2980b9;
+      }
+      .lesson {
+        margin-bottom: 2em;
+        padding: 1em;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #eee;
+      }
+      .definition {
+        margin-top: 0.5em;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 0.5em;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+      code {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Lessons</h1>
+
+    <div class="lesson">
+      <h2>1. DOM Selectors</h2>
+      <div class="definition">
+        DOM selectors are methods used to select HTML elements from the document
+        so you can manipulate them with JavaScript.<br />
+        <strong>Details:</strong> You can select elements by their ID, class,
+        tag name, or CSS selector.<br />
+        <strong>Examples:</strong>
+        <pre><code>
+// Select by ID
+const title = document.getElementById('main-title');
+
+// Select by class
+const items = document.getElementsByClassName('list-item');
+
+// Select by tag name
+const paragraphs = document.getElementsByTagName('p');
+
+// Select using CSS selector
+const firstButton = document.querySelector('.btn');
+ 
+// Select all elements matching a CSS selector
+const allButtons = document.querySelectorAll('.btn');
+// Returns a NodeList of all elements with class 'btn'
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="lesson">
+      <h2>2. Modifying Element Attributes</h2>
+      <div class="definition">
+        You can change the attributes of HTML elements (like <code>src</code>,
+        <code>href</code>, <code>class</code>) using JavaScript.<br />
+        <strong>Details:</strong> Use <code>setAttribute</code> to add or change
+        an attribute, and <code>removeAttribute</code> to delete one.<br />
+        <strong>Examples:</strong>
+        <pre><code>
+// Change the image source
+const img = document.getElementById('logo');
+img.setAttribute('src', 'new-logo.png');
+
+// Add a class to an element
+img.setAttribute('class', 'highlighted');
+
+// Remove an attribute
+img.removeAttribute('alt');
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="lesson">
+      <h2>3. Modifying Element Content</h2>
+      <div class="definition">
+        JavaScript allows you to change the text or HTML inside an element using
+        properties like <code>innerHTML</code> and
+        <code>textContent</code>.<br />
+        <strong>Details:</strong> <code>innerHTML</code> can set HTML markup,
+        while <code>textContent</code> sets plain text.<br />
+        <strong>Other useful properties:</strong> <code>innerText</code> sets or
+        gets the visible text of an element, and <code>value</code> is used for
+        form elements like input, textarea, and select.<br />
+        <strong>Examples:</strong>
+        <pre><code>
+// Change the text inside a paragraph
+const para = document.querySelector('p');
+para.textContent = 'This is new text!';
+
+// Insert HTML into a div
+const box = document.getElementById('box');
+box.innerHTML = '&lt;strong&gt;Bold text!&lt;/strong&gt;';
+
+// Change the visible text of an element
+const heading = document.getElementById('main-heading');
+heading.innerText = 'Welcome to JavaScript!';
+
+// Change the value of an input field
+const input = document.getElementById('username');
+input.value = 'JohnDoe';
+        </code></pre>
+      </div>
+    </div>
+
+    <div class="lesson">
+      <h2>4. JavaScript Integration with HTML</h2>
+      <div class="definition">
+        JavaScript can be integrated with HTML to make web pages interactive.<br />
+        <strong>Details:</strong> You can use event listeners to respond to user
+        actions like clicks, mouse movements, or keyboard input.<br />
+        <strong>Examples:</strong>
+        <pre><code>
+// Add a click event to a button
+const btn = document.getElementById('myBtn');
+btn.addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+
+// Change content when input changes
+const input = document.getElementById('nameInput');
+input.addEventListener('input', function() {
+  document.getElementById('output').textContent = input.value;
+});
+        </code></pre>
+      </div>
+    </div>
+  </body>
+</html>

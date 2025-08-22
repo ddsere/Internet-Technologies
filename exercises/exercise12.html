@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise12</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      header {
+        width: 100%;
+        height: 5%;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo-container img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 12px 12px;
+      }
+      .navigation ul {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-right: 18px;
+      }
+      .navigation ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      .navigation ul li {
+        list-style: none;
+      }
+      #burger {
+        cursor: pointer;
+        display: none;
+        padding-right: 16px;
+      }
+      .menu-panel {
+        background-color: black;
+        color: white;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+      }
+      #btn-close {
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+      .menu-panel ul {
+        padding: 50px 20px;
+      }
+      .menu-panel ul li {
+        margin-bottom: 16px;
+        list-style: none;
+      }
+      .menu-panel ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @media screen and (max-width: 575px) {
+        #burger {
+          display: block;
+        }
+        .navigation {
+          display: none;
+        }
+        .logo-container h3 {
+          display: none;
+        }
+        .menu-panel.active {
+          right: 0;
+          transition: right 500ms ease-in-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/assets/images/IMG-20240310-WA0045.jpg" alt="profile-img" />
+        <h3>Daham Serasinghe</h3>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <i class="fa-solid fa-bars" id="burger" style="color: #ffffff"></i>
+      <nav class="menu-panel" id="menu-panel-id">
+        <button id="btn-close" class="close-btn">&times;</button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const menuPanel = document.getElementById("menu-panel-id");
+      const closeBtn = document.getElementById("btn-close");
+
+      burger.addEventListener("click", () => {
+        menuPanel.classList.add("active");
+      });
+      closeBtn.addEventListener("click", () => {
+        menuPanel.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

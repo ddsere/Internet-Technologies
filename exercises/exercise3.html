@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excercise 3</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="width: 700px">
+      <tr height="50px">
+        <td colspan="4">Personal information</td>
+      </tr>
+      <tr height="50px">
+        <td>Name :</td>
+        <td colspan="3">
+          <label for="name">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </label>
+        </td>
+      </tr>
+      <tr height="50px">
+        <td>Age :</td>
+        <td colspan="3">
+          <label for="Age">
+            <input type="number" value="18" />
+          </label>
+        </td>
+      </tr>
+      <tr height="50px">
+        <td rowspan="3">Address :</td>
+        <td>Street :</td>
+        <td colspan="2">
+          <label for="text">
+            <input
+              type="text"
+              name="street"
+              id="street"
+              placeholder="Enter your street"
+            />
+          </label>
+        </td>
+      </tr>
+      <tr height="50px">
+        <td>City :</td>
+        <td colspan="2">
+          <label for="city">
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="Enter your city"
+            />
+          </label>
+        </td>
+      </tr>
+      <tr height="50px">
+        <td>Zip code :</td>
+        <td colspan="3">
+          <label for="phone">
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </label>
+        </td>
+      </tr>
+
+      <tr height="50px">
+        <td colspan="4">Additional information</td>
+      </tr>
+      <tr height="100px">
+        <td colspan="4">
+          <textarea name="textarea" id="" rows="5" cols="100"></textarea>
+        </td>
+      </tr>
+      <tr height="50px">
+        <td colspan="4"><button>submit</button></td>
+      </tr>
+      <tr></tr>
+    </table>
+  </body>
+</html>
