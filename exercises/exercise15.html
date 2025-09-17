@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 15</title>
+    <style>
+      body {
+        background-color: rgb(21, 101, 104);
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .circle {
+        width: 380px;
+        height: 380px;
+        background-color: rgb(86, 86, 86);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .circle::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 20px solid white;
+        border-top: 20px solid red;
+        transition: 2s;
+      }
+      .circle:hover::before {
+        transform: rotate(360deg);
+      }
+      .text {
+        position: absolute;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="circle"><h2 class="text">RWAD</h2></div>
+    </section>
+  </body>
+</html>
