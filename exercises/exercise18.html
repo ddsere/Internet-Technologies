@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 18</title>
+    <style>
+      main {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      main > section {
+        height: 100%;
+        width: 400%;
+        display: flex;
+        animation-name: slide;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      div {
+        width: 100%;
+        height: 100%;
+      }
+
+      div:first-child {
+        background-image: url(https://cdn.pixabay.com/photo/2022/08/08/19/36/landscape-7373484_1280.jpg);
+        background-size: cover;
+      }
+
+      div:nth-child(2) {
+        background-image: url(https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_1280.jpg);
+        background-size: cover;
+      }
+
+      div:nth-child(3) {
+        background-image: url(https://cdn.pixabay.com/photo/2014/09/02/15/28/styggkarret-433688_1280.jpg);
+        background-size: cover;
+      }
+
+      div:nth-child(4) {
+        background-image: url(https://cdn.pixabay.com/photo/2021/08/27/18/50/water-6579313_1280.jpg);
+        background-size: cover;
+      }
+
+      @keyframes slide {
+        0%,
+        20% {
+          transform: translateX(0);
+        }
+        30%,
+        50% {
+          transform: translateX(-25%);
+        }
+        60%,
+        80% {
+          transform: translateX(-50%);
+        }
+        90%,
+        100% {
+          transform: translateX(-75%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </main>
+  </body>
+</html>
