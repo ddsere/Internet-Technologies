@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 20</title>
+    <style>
+      body {
+        overflow: hidden;
+        background-color: black;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #bar {
+        display: flex;
+        gap: 10px;
+      }
+      .item {
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 8px;
+      }
+
+      #button-container {
+        margin-top: 20px;
+        gap: 10px;
+        display: flex;
+      }
+
+      #start-button {
+        background-color: green;
+        color: white;
+      }
+
+      #stop-button {
+        background-color: red;
+        color: white;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="bar">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div id="button-container">
+        <button id="start-button">START</button>
+        <button id="stop-button">STOP</button>
+      </div>
+    </div>
+
+    <audio id="music" src="/assets/audios/Knight-Rider-Theme-Song.mp3"></audio>
+
+    <script src="/assets/lib/jQuery/jquery-3.6.4.min.js"></script>
+    <script>
+      const lights = $(".item");
+      let lightNumber = 0;
+      let direction = "RIGHT";
+
+      const updateLight = () => {
+        lights.css("background-color", "white");
+
+        lights[lightNumber].style.backgroundColor = "red";
+
+        if (lightNumber > 0)
+          lights[lightNumber - 1].style.backgroundColor = "pink";
+
+        if (lightNumber < lights.length - 1)
+          lights[lightNumber + 1].style.backgroundColor = "pink";
+
+        if (lightNumber == 0) direction = "RIGHT";
+        if (lightNumber == lights.length - 1) direction = "LEFT";
+
+        if (direction == "RIGHT") lightNumber++;
+        else lightNumber--;
+      };
+
+      let interval = setInterval(updateLight, 100);
+      $("#start-button").on("click", (e) => {
+        clearInterval(interval);
+        interval = setInterval(updateLight, 100);
+        $("#music")[0].play();
+      });
+      $("#stop-button").on("click", (e) => {
+        clearInterval(interval);
+        $("#music")[0].pause();
+      });
+    </script>
+  </body>
+</html>
